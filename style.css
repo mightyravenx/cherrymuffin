@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Spectral&display=swap');
 
 .emoji {
-  font-size: 90%; /* Reduce the size of emojis slightly */
-  vertical-align: middle; /* Align emojis better with the text */
-  margin: 0 -2px; /* Reduce space between emojis and text */
+  font-size: 90%; 
+  vertical-align: middle; 
+  margin: 0 -2px; 
 }
 
 .center-text {
@@ -16,8 +16,8 @@ p {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 4px; /* Reduce spacing between elements */
-  line-height: 1; /* Reduce space between lines */
+  gap: 4px; 
+  line-height: 1; 
 }
 
 p {
@@ -25,9 +25,9 @@ p {
   font-size: 30px;
   text-align: center;
   word-wrap: break-word;
-  line-height: 1;  /* ✅ Reduce extra space */
-  margin: 5px 0;  /* ✅ Remove default margin */
-  padding: 0;  /* ✅ Remove extra padding */
+  line-height: 1; 
+  margin: 5px 0; 
+  padding: 0; 
 }
 
 body, html {
@@ -46,17 +46,16 @@ body {
     justify-content: center;
     background-size: 1000px;
     background-image:url("image3.jpg");
-    background-size: cover; /* Stretches to fill the entire screen */
-    background-position: center center; /* Centers the background */
+    background-size: cover; 
+    background-position: center center;
     background-repeat: no-repeat;
 }
 
-/* Paper Styles */
 .paper {
-  background-image: url("image8.jpg"); /* ✅ Correct property */
-  background-size: cover; /* Ensures it covers the entire div */
-  background-position: center center; /* Centers the image */
-  background-repeat: no-repeat; /* Prevents tiling */
+  background-image: url("image8.jpg"); 
+  background-size: cover; 
+  background-position: center center;
+  background-repeat: no-repeat;
   
   padding: 20px 30px;
   transform: rotateZ(-5deg);
@@ -71,7 +70,6 @@ body {
   align-items: center;
 }
 
-/* Fixed Image Resizing */
 .paper img {
   width: 100%;
   height: auto;
@@ -84,7 +82,6 @@ body {
   user-select: none;
 }
 
-/* LOADER ANIMATION */
 .back {
     position: fixed;
     top: 0;
@@ -95,7 +92,6 @@ body {
     animation: backdiv 1s infinite;
 }
 
-/* Fixed Heart Animation (Keeps Centered) */
 .heart2 {
     position: absolute;
     top: 50%;
@@ -107,7 +103,6 @@ body {
     animation: beat 1s infinite, fadeOut 1s 3s forwards;
 }
 
-/* Ensures the Heart Stays Centered */
 .heart2:after, .heart2:before {
     content: "";
     background-color: pink;
@@ -127,19 +122,16 @@ body {
     left: 0;
 }
 
-/* Heart Beat Animation (Keeps Centered) */
 @keyframes beat {
     0% { transform: translate(-50%, -50%) scale(1) rotate(-45deg); }
-    50% { transform: translate(-50%, -50%) scale(0.8) rotate(-45deg); } /* ✅ Prevents shifting */
+    50% { transform: translate(-50%, -50%) scale(0.8) rotate(-45deg); }
     100% { transform: translate(-50%, -50%) scale(1) rotate(-45deg); }
 }
 
-/* Background Flickering Animation */
 @keyframes backdiv {
   50% { background: #ffe6f2; }
 }
 
-/* Ensures the heart disappears smoothly */
 .fade-out {
     animation: fadeOut 1s forwards;
 }
@@ -149,7 +141,6 @@ body {
     100% { opacity: 0; visibility: hidden; }
 }
 
-/* Ensures content is initially hidden and smoothly fades in */
 #content {
     display: flex;
     opacity: 0;
