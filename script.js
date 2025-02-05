@@ -5,7 +5,6 @@ document.addEventListener("DOMContentLoaded", function () {
   const content = document.getElementById("content");
   const papers = document.querySelectorAll(".paper");
   
-  // Music Setup
   const music = new Audio("music.mp3");
   music.loop = true; 
 
@@ -16,13 +15,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
   console.log("Starting animation...");
 
-  // Heart animation disappears after 3 seconds
   setTimeout(() => {
       heart.classList.add("fade-out");
       console.log("Heart fading out...");
   }, 3000);
 
-  // Show content after 4 seconds
   setTimeout(() => {
       loader.style.display = "none";
       content.style.visibility = "visible";
@@ -30,7 +27,6 @@ document.addEventListener("DOMContentLoaded", function () {
       console.log("Loader removed, content appearing...");
   }, 4000);
 
-  // Play music when clicking any paper
   papers.forEach(paper => {
       paper.addEventListener("click", function () {
           music.play().then(() => {
@@ -41,7 +37,6 @@ document.addEventListener("DOMContentLoaded", function () {
       });
   });
 
-  // Dragging functionality without sticking to pointer
   papers.forEach(paper => {
       paper.addEventListener("mousedown", function (event) {
           event.preventDefault();
